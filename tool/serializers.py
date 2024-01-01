@@ -3,8 +3,10 @@ from .models import Tool, Tag
 
 
 class ToolSerializer(serializers.ModelSerializer):
-    tags = serializers.StringRelatedField(
-        many=True
+    tags = serializers.SlugRelatedField(
+        many=True,
+        read_only=True,
+        slug_field='name'
     )
     
     class Meta:

@@ -3,5 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    path('tools', views.get_tools, name='get_tools')
+    path('tools', views.get_tools, name='get_tools'),
 ]
