@@ -5,7 +5,7 @@ from .models import Tool, Tag
 class ToolSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tool
-        fields = '__all__'
+        fields = ('id', 'title', 'link', 'description', 'tags')
 
     tags = serializers.StringRelatedField(
         many=True
